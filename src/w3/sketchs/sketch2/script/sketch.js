@@ -1,7 +1,7 @@
 let pos;
 let vel;
 let acc;
-let radius = 50;
+let radius = 25;
 
 function setup() {
   setCanvasContainer('canvas', 3, 2, true);
