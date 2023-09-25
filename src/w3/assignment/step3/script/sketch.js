@@ -33,6 +33,18 @@ function draw() {
   stroke('black');
   line(pos.x, pos.y, centerToMouse.x, centerToMouse.y);
 
+  if (mouseIsPressed) {
+    followingMouse = false;
+  } else {
+    followingMouse = true;
+  }
+
+  if (followingMouse) {
+    acc = posMv;
+  } else {
+    acc.mult(0);
+  }
+
   centerToMouse.normalize();
   centerToMouse.mult(50);
   strokeWeight(4);
