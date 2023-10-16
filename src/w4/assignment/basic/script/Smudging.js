@@ -35,9 +35,11 @@ function draw() {
 }
 
 function mousePressed() {
-  if (isMouseInsideCanvas()) {
-    reset();
-  }
+  // if (isMouseInsideCanvas()) {
+  //   reset();
+  // }
+  mover.mousePressed(mouseX, mouseY);
+  pMVec.set(mouseX, mouseY);
 }
 
 function reset() {
