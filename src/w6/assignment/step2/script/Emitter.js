@@ -2,7 +2,7 @@ class Emitter {
   constructor(emittingPosX, emittingPosY) {
     this.emittingPos = createVector(emittingPosX, emittingPosY);
     this.particles = [];
-    this.particleNum = 1; // Set the number of balls to 100
+    this.particleNum = 1; // 파티클 수 100개로 설정
     this.hasCreatedBall = false;
   }
 
@@ -11,7 +11,7 @@ class Emitter {
       return;
     }
     for (let i = 0; i < this.particleNum; i++) {
-      // Loop through 100 times to create 100 balls
+      // 파티클 100번 생성하기 위해서 *100
       const angle = random(TAU);
       const p = new Particle(
         this.emittingPos.x,
@@ -26,6 +26,7 @@ class Emitter {
     this.hasCreatedParticle = true;
   }
 
+  // 
   applyGravity(gravity) {
     this.particles.forEach((each) => {
       const scaledG = p5.Vector.mult(gravity, each.mass);
