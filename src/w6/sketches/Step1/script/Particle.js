@@ -1,7 +1,7 @@
-// Original Code from: https://editor.p5js.org/natureofcode/sketches/-xTbGZMim
+// Original Code from: https://editor.p5js.org/natureofcode/sketches/1gpoE1dtG
 // Daniel Shiffman
 // The Nature of Code
-// Example 4-2: An Array of Particles
+// Example 4-1: A Single Particle
 
 //Modified by OO-SUNG SON (spctrm404)
 
@@ -14,13 +14,6 @@ class Particle {
     this.lifespan = 255.0;
   }
 
-  run() {
-    let gravity = createVector(0, 0.05);
-    this.applyForce(gravity);
-    this.update();
-    this.display();
-  }
-
   update() {
     this.vel.add(this.acc);
     this.pos.add(this.vel);
@@ -30,8 +23,7 @@ class Particle {
 
   display() {
     stroke(0, this.lifespan);
-    strokeWeight(2);
-    fill(127, this.lifespan);
+    fill(0, this.lifespan);
     circle(this.pos.x, this.pos.y, 8);
   }
 
@@ -40,6 +32,6 @@ class Particle {
   }
 
   isDead() {
-    return this.lifespan < 0.0;
+    return this.lifespan < 0;
   }
 }
