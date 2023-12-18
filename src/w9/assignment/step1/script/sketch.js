@@ -32,7 +32,7 @@ let mouse;
 
 function setup() {
   setCanvasContainer('canvas', cWidth, cHeight, true);
-  background('lightsteelblue');
+  background('40');
 
   const concaveA = [
     { x: 0, y: 0 },
@@ -168,19 +168,19 @@ function setup() {
 }
 
 function draw() {
-  background('lightsteelblue');
+  background(40);
   colorMode(HSL);
 
-  stroke(183, 94, 50);
-  fill(83, 95, 50);
+  stroke(60, 80, 40);
+  fill(60, 20, 40);
   drawParts(ropeA);
 
-  stroke(258, 84, 56);
-  fill(232, 84, 56);
+  stroke(220, 20, 22);
+  fill(220, 84, 22);
   drawParts(ropeB);
 
-  stroke(36, 81, 31);
-  fill(22, 96, 56);
+  stroke(42, 20, 31);
+  fill(42, 20, 56);
   drawParts(ropeC);
 
   mouse.pixelRatio = (pixelDensity() * width) / cWidth;
