@@ -81,7 +81,7 @@ function setup() {
   const BodyC = decomp.quickDecomp(concaveC);
   group = CustomBody.nextGroup(true);
 
-  ropeA = Composites.stack(100, 50, 8, 1, 10, 8, function (x, y) {
+  ropeA = Composites.stack(100, 50, 6, 1, 10, 8, function (x, y) {
     return Bodies.fromVertices(x, y, RandomShape(concaveA), {
       collisionFilter: { group: group },
     });
@@ -104,7 +104,7 @@ function setup() {
 
   group = CustomBody.nextGroup(true);
 
-  ropeB = Composites.stack(350, 50, 10, 1, 10, 10, function (x, y) {
+  ropeB = Composites.stack(350, 50, 12, 2, 10, 10, function (x, y) {
     return Bodies.fromVertices(x - 20, y, RandomShape(concaveB), {
       collisionFilter: { group: group },
     });
